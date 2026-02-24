@@ -13,7 +13,7 @@ See [Docker container pathogentotree](https://github.com/tleppertbio/pathogentot
 3) [google buckets](https://github.com/tleppertbio/pathogentotree/pathogentotree.README.md#how-to-create-a-bucket-identify-your-google-region-and-viewing-pricing-tablessizes-for-vms), creating a bucket to house your output data until you can retrieve it to your local machine.
 4) [reference data](https://github.com/tleppertbio/pathogentotree/pathogentotree.README.md#create-and-execute-refbucketsetupscript-file), reference files prepped for analysis using nucmer, bedtools maskfasta, samtools faidx, picard.jar and bwa, which reside in the google bucket and vms during analysis.
 5) [directory structure](https://github.com/tleppertbio/pathogentotree/pathogentotree.README.md#directory-structure-on-your-local-machine), the directory structure that is created on your local machine, pathogentotree's expected structure.
-6) [after this program](https://github.com/tleppertbio/pathogentotree/pathogentotree.README.md#execute-cleanupmycosnpvmfilescript-to-clean-and-sort-data-and-pull-data-from-bucket) removes terminated vms, moves files from the bucket to the local directory, requeues partially run datasets.
+6) [after this program](https://github.com/tleppertbio/pathogentotree/pathogentotree.README.md#execute-cleanupmycosnpvmscript-to-clean-and-sort-data-and-pull-data-from-bucket) removes terminated vms, moves files from the bucket to the local directory, requeues partially run datasets.
 7) [pathogentotree package](https://github.com/tleppertbio/pathogentotree/pathogentotree.README.md) full documentation to the entire process, setting up google cloud vms to run pathogentotree docker container to analyze nih sra datasets to find reference compared sequence edits.
 
 ### Running mycosnp-bucket-clean.py
@@ -34,13 +34,13 @@ See [Docker container pathogentotree](https://github.com/tleppertbio/pathogentot
   **Things to know**
   
   - Reads bucket.list to determine which SRAs have a completed .maple and .g.vcf.gz and .finished and .done file.
-  - Creates cleanup-mycosnpvm-file.script, which processes the finished, or incomplete or failed runs using reset.script.
+  - Creates cleanup-mycosnp-vm.script, which processes the finished, or incomplete or failed runs using reset.script.
   - Note the underlying reset.script actually determines if a vm is 'TERMINATED' or 'RUNNING'.
   - A log will be created of what files were removed.
   - [mycosnp-bucket-clean.example](https://github.com/tleppertbio/pathogentotree/mycosnp-bucket-clean.example) scenario lists of files from the bucket, what order they are generated.
 
 Example of every type of trigger found in the cleanup-mycosnpvm-file.script file created by this mycosnp-bucket-clean.py program.
-[example clean-vm-file.script](https://github.com/tleppertbio/pathogentotree/cleanup-mycosnpvm-file.script.example)
+[example cleanup-mycosnp-vm.script](https://github.com/tleppertbio/pathogentotree/cleanup-mycosnp-vm.script.example)
 
 Here is an example of a log file that is created by this mycosnp-bucket-clean.py python program.
 [example cleanup-bucket-DATE.log](https://github.com/tleppertbio/pathogentotree/cleanup-bucket_2026-01-30_09-49-39.log)
