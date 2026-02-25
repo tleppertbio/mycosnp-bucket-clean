@@ -41,7 +41,7 @@ See [pathogentotree github aux suite](https://github.com/tleppertbio/pathogentot
   - [mycosnp-bucket-clean.example](https://github.com/tleppertbio/pathogentotree/blob/main/mycosnp-bucket-clean.example) scenario lists of files from the bucket, what order they are generated.
 
 Example of every type of trigger found in the cleanup-mycosnpvm-file.script file created by this mycosnp-bucket-clean.py program.
-[example cleanup-mycosnp-vm.script](https://github.com/tleppertbio/pathogentotree/cleanup-mycosnp-vm.script.example)
+[example cleanup-mycosnp-vm.script](https://github.com/tleppertbio/pathogentotree/blob/main/cleanup-mycosnp-vm.script.example)
 
 Here is an example of a log file that is created by this mycosnp-bucket-clean.py python program.
-[example cleanup-bucket-DATE.log](https://github.com/tleppertbio/pathogentotree/cleanup-bucket_2026-01-30_09-49-39.log)
+[example cleanup-bucket-DATE.log](https://github.com/tleppertbio/pathogentotree/blob/main/cleanup-bucket_2026-01-30_09-49-39.log)
