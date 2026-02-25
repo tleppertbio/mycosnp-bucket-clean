@@ -2,14 +2,14 @@
 Python code pushes make_mycosnp_script sample scripts to google vms running a docker image tleppertwood/pathogentotree.
 The docker image tleppertwood/pathogentotree processes sra sample data from nih.
 The docker image compares sample data to reference sequence and returns comparison edits in the form of .g.vcf.gz and .maple files.
-See [Docker container pathogentotree](tleppertwood/pathogentotree:latest) the docker container that performs the comparisons.
+See the Docker container tleppertwood/pathogentotree:latest the docker container that performs the comparisons.
 See [pathogentotree github aux suite](https://github.com/tleppertbio/pathogentotree/blob/main/README.md) scripts and programs that interact with the docker container.
 
 ---
 
 ## What will you need
 
-1) [collect metadata](https://github.com/tleppertbio/pathogentotree/metadata.README.md), to determine if you have the correct samples and the size of the sample file.
+1) [collect metadata](https://github.com/tleppertbio/pathogentotree/blob/main/metadata.README.md), to determine if you have the correct samples and the size of the sample file.
 2) [sra_now.list](https://github.com/tleppertbio/pathogentotree/README.md#create-sra_nowlist-file), a file containing the size of the sample file and the sra number, tab separated.
 3) [google buckets](https://github.com/tleppertbio/pathogentotree/README.md#how-to-create-a-bucket-identify-your-google-region-and-viewing-pricing-tablessizes-for-vms), creating a bucket to house your output data until you can retrieve it to your local machine.
 4) [reference data](https://github.com/tleppertbio/pathogentotree/README.md#create-and-execute-ref-bucket-setupscript-file), reference files prepped for analysis using nucmer, bedtools maskfasta, samtools faidx, picard.jar and bwa, which reside in the google bucket and vms during analysis.
