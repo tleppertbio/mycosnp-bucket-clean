@@ -2,7 +2,8 @@
 Python code pushes make_mycosnp_script sample scripts to google vms running a docker image tleppertwood/pathogentotree.
 The docker image tleppertwood/pathogentotree processes sra sample data from nih.
 The docker image compares sample data to reference sequence and returns comparison edits in the form of .g.vcf.gz and .maple files.
-See [Docker container pathogentotree](https://github.com/tleppertbio/pathogentotree/README.md) the docker container that performs the comparisons.
+See [Docker container pathogentotree](sha256:817254ed0a574557853395b4596186f656a62ec5940e870e04794a3415325cee) the docker container that performs the comparisons.
+See [pathogentotree github aux suite](https://github.com/tleppertbio/pathogentotree/blob/main/README.md) scripts and programs that interact with the docker container.
 
 ---
 
