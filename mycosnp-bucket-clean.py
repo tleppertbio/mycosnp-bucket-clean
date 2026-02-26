@@ -369,7 +369,10 @@ elif ( not done and not maple and not vcf and not bam and not bai and not early_
 else:
     flog.write(f"echo '{last_SRR}' not finished.\n")     
 #end of ifs (for last last_SRR)
- 
+
+# chmod 755 fileout
+os.chmod(fileout,0o775)
+
 # close files
 fin.close()
 fout.close()
